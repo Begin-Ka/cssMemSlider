@@ -314,13 +314,41 @@ p{
     color: chocolate;
     box-shadow: 0 4px 2px gray;
 }
-.menu-brends {
+.menu-contacts {
     width: 100%;
     max-width: 370px;
     display: flex;
     flex-direction: column;
     justify-content: left;    
     padding: 10px 10px;  
+
+}
+
+.contacts-link {
+    width: 300px;
+    height: 34px;
+    font-size: 20px;
+    font-weight: 700;    
+    padding-top: 5px;
+    padding-left: 7px;    
+    color:chocolate; 
+    text-decoration: none; 
+}
+.contacts-link:hover {
+    font-size: 24px;    
+    color: orange;
+    transition: .3s linear;
+}
+
+.adress-link {
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 500;    
+    padding-top: 5px;
+    padding-left: 7px;    
+    color:black;
+    text-decoration: none;
 
 }
 .slider {    
@@ -351,6 +379,15 @@ p{
     width: 300px;
     height: 300px;
     float: left;
+}
+.menu-photo {
+    width: 300px;
+    height: 300px;    
+    margin: 50px 5px;    
+}
+.photo {
+    width: 300px;
+    height: 300px;
 }
 
 .catalog-inner {
@@ -457,6 +494,25 @@ p{
     color: orange;
     transition: .2s linear;
     border: 2px solid orange;
+}
+
+.footer {
+    margin-top: -150px;
+}
+.contact-footer {
+    width: 500px;
+    font-family:'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    color:white;    
+    margin-top: 15px;
+    text-align: center;    
+}
+.contact-footer:hover{
+    font-size: 18px;
+    color: orange;
+    transition: .2s linear;
 }
 
 /* popup */
