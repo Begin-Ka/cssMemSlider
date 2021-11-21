@@ -1,3 +1,4 @@
+// slider 
 
 autoSlider();
 var timer;
@@ -16,3 +17,24 @@ function autoSlider() {
 };
 
 console.log(autoSlider);
+
+// burger
+
+let burgerbtn = document.querySelector(".burger-btn");
+let burgermenu = document.querySelector(".burger-menu");
+
+burgerbtn.addEventListener('click', function(){
+    burgerbtn.classList.toggle ('active');
+    burgermenu.classList.toggle ('active');
+});
+
+// arrowUp прокрутка страницы вверх
+
+
+window.onload = function(){
+    document.getElementById('arrowUp').onclick = function(){
+        window.scrollTo(0, 0);
+    }    
+};
+
+
