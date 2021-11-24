@@ -47,3 +47,14 @@ $(document).ready(function() {
 	});
 
 });
+
+// burger menu
+
+let burgerbtn = document.querySelector(".burger-btn");
+let burgermenu = document.querySelector(".burger-menu");
+
+burgerbtn.addEventListener('click', function(){
+    burgerbtn.classList.toggle ('active');
+    burgermenu.classList.toggle ('active');
+});
+

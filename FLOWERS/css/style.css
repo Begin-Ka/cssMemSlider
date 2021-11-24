@@ -78,6 +78,126 @@ html {
     transition: color 2s linear;
 }
 
+/* burger */
+
+.burger{
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;    
+    background-color: rgb(243, 126, 194);   
+   
+}
+.burger-btn{    
+    display: block;      
+    width: 50px;
+    height: 50px;   
+    justify-content: center;    
+    position: relative;      
+    
+}
+.burger-btn span {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background-color:white;
+    transition: all 0.5s;
+}
+.burger-btn span:nth-of-type(2) {
+    top:14px;
+}
+.burger-btn span:nth-of-type(3) {
+    top: 36px;
+}
+
+/* burger-btn.active*/
+
+.burger-btn.active span {
+    opacity: 0;
+}
+.burger-btn.active span:nth-of-type(2){
+    opacity: 1;
+    top: 50%;
+    transform: rotate(45deg);
+}
+.burger-btn.active span:nth-of-type(3){
+    opacity: 1;
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+/* burger-menu*/
+
+.burger-menu {
+    display: flex;
+    position: fixed;    
+    flex-direction: column;    
+    justify-content:start;
+    width: 270px;    
+    height: 150px;
+    padding: 10px;
+    background-color: rgb(243, 126, 194);    
+    top: 100px;
+    left: 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: all ease 1s;
+}
+.burger-menu.active {
+    transform: translateX(0);
+    transition: all ease 1s;
+}
+ 
+.burger-link {
+    display: block;
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 270px;
+    height: 26px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 40px;
+}
+.burger-link:hover{
+    color: orange;    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.cantact-link {
+    display: block;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;    
+    font-style: normal;
+    font-weight: 700; 
+    line-height: 1.6;   
+    color: gainsboro; 
+    text-transform: uppercase; 
+    text-decoration: none;
+    transition: all ease 1s;
+}
+.cantact-link:hover{
+    color: orange;
+    transition: all .3s linear;
+    scroll-behavior: smooth;
+    cursor: pointer;    
+    box-shadow: 0 0 3px 3px rgb(238, 195, 117);
+}
+
 /*main */
 
 .main {
@@ -183,6 +303,7 @@ html {
 .main-partfolio {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     max-width: 1000px;
@@ -363,6 +484,7 @@ html {
 .main-contacts {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content:space-between;
     width: 100%;
     max-width: 1000px;
@@ -374,7 +496,7 @@ html {
     width: 50%;
     max-width: 700px;
     height: auto;
-    margin: auto;
+    margin: 0 auto;
 }
 .map {
     border: white 3px solid;
@@ -385,6 +507,7 @@ html {
     align-items: center;
     width: 50%;
     max-width: 400px;
+    margin: 0 auto;
 }
 
 .contacts-content {
@@ -398,6 +521,7 @@ html {
     padding: 30px;
     text-decoration: none;
     color: white;
+    margin: 0 auto;
 }
 .contacts-title{
     font-size: 18px;
@@ -517,6 +641,8 @@ html {
 }
 .letter {
     display: flex;
+    flex-direction: column;
+    justify-content: center;    
     width: 100%;
     max-width: 500px;
     height: 520px;
