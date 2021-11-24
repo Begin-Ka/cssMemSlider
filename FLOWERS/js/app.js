@@ -27,11 +27,23 @@ window.onload = function(){
 
 // form to email
 
-document.addEventListener('DOMContentLoaded', function(){
-    const form = document.getElementById('form');
-    form.addEventListener('submit', formSend);
-    
-    async function formSend(e){
-        e.preventDefault();
-    }
+$(document).ready(function() {
+
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "send.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Савсибо!Ваш запрос отправлен");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
 });

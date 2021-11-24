@@ -548,9 +548,9 @@ input.massage {
     margin: 5px auto;
 }
 
-.letter-btn {
+ input.letter-btn {
     display: block;
-    width: 100px;
+    width: 350px;
     height: 30px;
     padding: 7px 10px;
     margin-top: 10px;

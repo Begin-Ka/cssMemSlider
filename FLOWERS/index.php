@@ -153,8 +153,9 @@
             </div>
     <!--form to email -->
             <div id="letter" class="main-letter">
-                <div class="letter">            
-                    <form id="form" action="send.php" method="post">
+                <div class="letter"> 
+
+                    <form id="form" action="mail.php" method="post">
                         <!--Hidden Required fields-->
                         <input type="hidden" name="project_name" value="Site Name">
                         <input type="hidden" name="admin_email" value="1215451b@gmail.com">
