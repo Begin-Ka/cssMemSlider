@@ -1,0 +1,680 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+/*header*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    max-width: 250px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+.header-nav {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+.fas,
+.fab {
+    display: flex;
+    color: rgb(15, 145, 145);
+    font-size: 20px;
+    margin: 35px auto;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+.fas:hover{
+    color: rgb(25, 230, 230); 
+}
+.fab:hover{   
+    color: rgb(25, 230, 230);       
+}
+.logo {   
+    font-size: 38px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    color: grey;
+}
+.nav-link {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(15, 121, 121);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all .3s linear;
+}
+.nav-link:hover {
+    color: rgb(25, 230, 230); 
+}
+
+/* burger */
+
+.burger{
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;    
+    background-color: white;   
+   
+}
+.burger-btn{    
+    display: block;      
+    width: 50px;
+    height: 50px;   
+    justify-content: center;    
+    position: relative;      
+    
+}
+.burger-btn span {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background-color:rgb(15, 121, 121);
+    transition: all 0.5s;
+}
+.burger-btn span:nth-of-type(2) {
+    top:14px;
+}
+.burger-btn span:nth-of-type(3) {
+    top: 36px;
+}
+
+/* burger-btn.active*/
+
+.burger-btn.active span {
+    opacity: 0;
+}
+.burger-btn.active span:nth-of-type(2){
+    opacity: 1;
+    top: 50%;
+    transform: rotate(45deg);
+}
+.burger-btn.active span:nth-of-type(3){
+    opacity: 1;
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+/* burger-menu*/
+
+.burger-menu {
+    display: flex;
+    position: fixed;    
+    flex-direction: column;    
+    justify-content:start;
+    width: 270px;    
+    height: 230px;
+    padding: 10px;
+    background-color: white;    
+    top: 100px;
+    left: 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: all ease 1s;
+}
+.burger-menu.active {
+    transform: translateX(0);
+    transition: all ease 1s;
+}
+ 
+.burger-link {
+    display: block;
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 270px;
+    height: 26px;
+    color:rgb(15, 121, 121);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 40px;
+}
+.burger-link:hover{
+    color: rgb(31, 219, 219);    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.burger-menu .fas {
+    margin-left: 15px;
+}
+.burger-menu .fab {
+    margin-left: 15px;
+}
+
+/*end burger*/
+
+/*------------------------------------------*/
+
+
+/*main*/
+
+.main {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;
+    
+}
+.main-holl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    width: 100%;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.image {
+    width: 100%;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+}
+.main-slider{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 40px auto;    
+}
+/*probel*/
+.probel {
+    width: 100%;
+    max-width: 100px;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;  
+}
+.probel-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(15, 121, 121);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 10px auto;
+}
+.probel-title:after{
+    content: " ";
+    display: flex;
+    width: 70px;
+    height: 3px;
+    background-color:rgb(15, 121, 121);
+    margin: 20px auto;   
+}
+
+/* slider*/
+.slider-block1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+.slider {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.slider-line {
+    height: 300px;
+    width: 900px;
+    display: flex;
+    position: relative;
+    transition: all ease 1s;
+    
+}
+.slider-line img {
+    float: left;
+}
+.slider-line:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+.slider-photo {
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+.slider-block2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+}
+.slider-content {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 0 auto;
+}
+.slider-item {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 10px auto;
+    font-size: 30px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    color: rgb(15, 121, 121);
+    padding: 15px 0px;
+}
+.slider-text {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 10px auto;
+    font-size: 20px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    color: rgb(15, 121, 121);
+    padding: 15px 0ps;
+}
+.slider-author {
+    display:flex; 
+    justify-content: end;   
+    width: 100%;
+    max-width: 520px;
+    height: auto;    
+    font-size: 18px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    color: grey;
+    margin: 0 auto;
+    padding: 20px 5px;
+}
+/*main-present*/
+
+.main-present {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    background-color:rgb(20, 102, 102);
+    margin: 0 auto;
+}
+.present-content {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    width: 100%;
+    max-width: 300px;
+}
+.present-content1 {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto 0px auto;
+    width: 100%;
+    max-width: 1000px;
+}
+.present-title {
+    font-size: 22px;
+    font-family:'Courier New', Courier, monospace; 
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.present-img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.image-present {
+    display: flex;
+    width: 280px;
+    height: 280px;
+    margin: 0 10px;
+}
+.image-present1{
+    width: 700px;
+    height: 350px;
+    margin: 0 auto;
+    transition: all .3s linear;
+}
+.image-present1:hover{
+    width: 830px;
+    height: 400px;
+
+}
+/*main-menu*/
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+.menu-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 25px auto;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+.block-menu1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+    margin: 0 auto;
+}
+.block-menu2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+}
+.image-menu {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+}
+.menu-price {    
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    font-family:'Courier New', Courier, monospace;
+    color: grey;
+    margin: 15px auto;
+    transition: all .3s linear;
+}
+.menu-price:hover {
+    color: rgb(22, 163, 163);
+    font-weight: 700px;
+
+}
+.menu-title {
+    width: 100%;
+    max-width: 520px;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    color: grey;
+    margin: 0 auto;
+}
+.menu-text {
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    color: grey;
+    margin: 20px auto;
+}
+.btn {
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    width: 105px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family:'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    margin-left: 0;
+    text-decoration: none;
+    transition: all .3s linear;
+    text-align: center;
+}
+.btn:hover {
+    background-color: rgb(22, 163, 163);
+    color: white;    
+}
+
+/*main-contacts*/
+
+.main-contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 70px auto;
+}
+.block-contacts1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+.map {
+    border: white 3px solid;
+    margin: 0 auto;
+}
+.social {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    justify-content: center;
+    margin: 20px auto;
+}
+.adress {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;
+}
+.text-adress {
+    font-size: 20px;
+    color: grey;
+}
+
+/*form-letter*/
+.main-letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    background-color: rgb(22, 163, 163);
+    margin: 0 auto;
+    
+}
+
+.letter {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;    
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+.letter-name {
+    width: 100%;
+    max-width: 280px;
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 300;
+    font-style: italic;
+    color: black;
+    margin: 15px auto;
+
+}
+.letter input {
+    width: 280px;
+    height: 40px;
+    background-color: white;
+    border: grey 2px solid;
+    margin: 5px auto;
+
+}
+input.massage {
+    width: 280px;
+    height: auto;
+    min-height: 100px;
+    background-color: white;
+    border: grey 2px solid;
+    margin: 5px auto;
+}
+
+input.letter-btn {
+    display: block;    
+    width: 100%;
+    max-width: 280px;
+    height: 30px;
+    padding: 7px 0px;
+    margin-left: 0;
+    background-color: rgb(211, 206, 206);
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border: grey 2px solid;
+    transition: all .3s linear;
+}
+input.letter-btn:hover{
+    background-color:white;
+    color: rgb(8, 71, 71);
+    font-weight: 700;
+}
+#form {
+    width: 280px;
+    height: auto;
+}
+/*footer*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(167, 167, 167);
+}
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 220pz;
+    height: auto;
+}
+
+/*arrowUp*/
+
+.arrowUp {
+    display: block;
+    position: fixed;    
+    font-size: 60px;       
+    bottom: 7%;
+    right: 3%;
+    color: rgb(14, 126, 126);        
+    z-index: 3;  
+    transition: all .3s linear;  
+}
+.arrowUp:hover{
+    color: rgb(34, 238, 238);
+    transition: all .3s linear;
+}
+
+
