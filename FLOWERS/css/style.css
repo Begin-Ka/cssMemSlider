@@ -141,7 +141,7 @@ html {
     background-color: rgb(243, 126, 194);    
     top: 100px;
     left: 0;
-    z-index: 2;
+    z-index: 4;
     transform: translateX(-100%);
     transition: all ease 1s;
 }
@@ -165,7 +165,7 @@ html {
     line-height: 40px;
 }
 .burger-link:hover{
-    color: orange;    
+    font-size: 13px;    
 }
 
 ul {
@@ -219,9 +219,18 @@ ul {
     max-width: 1600px;
     height: 450px;     
     margin: 100px 0 auto;
-    background-image: url("../assets/3.jpg");
-    opacity: 0.8;
+    background-image: url("../assets/3.jpg");   
+    position: relative;
     
+}
+.main-inner .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 2;
 }
 .inner-image {
     width: 100%;
@@ -234,14 +243,15 @@ ul {
     justify-content: center;
     align-items: center;
     width: 600px;
-    height: 350px;    
+    height: 350px;
+    z-index: 3;    
 }
 .inner-text {
     font-size: 46px;
     font-family:'Kaushan Script', cursive;
     font-style: italic;
     font-weight: 600;
-    color:black;
+    color:white;
     text-align: center;
     opacity: 1;
 }
@@ -262,6 +272,7 @@ ul {
     background-color: rgb(250, 93, 185);
     border: rgb(250, 93, 185) 2px solid;
     text-decoration: none;
+    z-index: 3;
 }
 .inner-btn:hover{
     background-color: rgb(248, 19, 153);
