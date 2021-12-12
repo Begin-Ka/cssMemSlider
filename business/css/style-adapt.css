@@ -1,0 +1,214 @@
+/* 1280 1024 */
+
+@media (max-width:1024px){
+    .header,
+    .footer {
+        width: 100%;
+        max-width: 1000px;
+        justify-content: center;
+    }
+    .header-logo,
+    .footer-logo {
+        max-width: 270px;
+    }
+    .header-nav,
+    .footer-nav {
+        max-width: 400px;
+    }
+    .main {
+        width: 100%;
+        max-width: 1000px;
+    }
+    .parallax {
+        width: 100%;
+        max-width: 1000px;
+    }
+    .page-content {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+    }
+    .image {
+        width: 280px;
+        height: 225px;
+        margin-bottom: 15px;
+    }
+    .image:hover {
+        width: 290px;
+        height: auto;
+    }
+    .title-jobs {
+        font-size: 24px;
+    }
+    .text-jobs {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width:768px){    
+    .header,
+    .footer {
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 750px;
+        justify-content: center;
+    } 
+    .header-nav,
+    .footer-nav {
+        max-width: 260px;
+    }
+    .logo {
+        font-size: 24px;
+    }
+    .nav-link {
+        font-size: 16px;
+    }
+    .fas,
+    .fab {
+        font-size: 16px;
+    }
+
+    .main {
+        width: 100%;
+        max-width: 750px;
+    }
+    .parallax {
+        width: 100%;
+        max-width: 750px;
+    }
+    .parallax h2 {
+        font-size: 28px;
+    }
+    .parallax h3 {
+        font-size: 16px;
+    }
+    .page-content {
+        width: 100%;
+        max-width: 768px;
+        height: auto;
+    }
+    .price {
+        width: 100%;
+        max-width: 750px;
+    }
+    .price-image {
+        width: 750px;
+        height: auto;
+    }   
+    .jobs-inner {
+        flex-wrap: wrap;
+        max-width: 470px;
+        height: 600px;
+        margin: 20px auto;        
+    }
+    .block-jobs1 {
+        width: 300px;
+        height: 300px;
+    }
+    .content-jobs {
+        width: 260px;
+        height: auto;
+    }
+    .block-jobs2 {
+        width: 300px;
+        height: 300px;
+    }
+    .image-jobs {
+        max-width: 300px;
+        height: 300px;
+    }    
+    .block-contacts1 {
+        margin-bottom: 15px;        
+    }
+    .map {
+        width: 300px;
+        height: 300px;
+    }
+    .social {
+        max-width: 300px;
+    }
+    .adress {
+        max-width: 300px;
+    }
+    .text-adress {
+        font-size: 13px;
+    }
+    .main-letter {
+        max-width: 280px;
+    }
+    .letter {
+        max-width: 280px;
+    }
+    .letter-name {
+        max-width: 280px;
+    }
+    .letter input {
+        max-width: 240px;
+    }
+    input.massage {
+        max-width: 240px;
+    }
+    input.letter-btn {
+        max-width: 240px;
+    }
+    
+    
+}
+
+@media (max-width:480px) {
+    .header,
+    .footer {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    } 
+    .header-nav,
+    .footer-nav {
+        max-width: 280px;        
+        height: auto;
+    }         
+    
+    .logo {
+        font-size: 18px;
+    }
+    .fas,
+    .fab {
+        opacity: 0;
+    }
+
+    .main {
+        width: 100%;
+        max-width: 300px;
+    }
+    .parallax {
+        width: 100%;
+        max-width: 300px;
+    }
+    .parallax h2 {
+        font-size: 20px;
+    }
+    .parallax h3 {
+        font-size: 13px;
+    }
+    .page-content {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    .price {
+        width: 100%;
+        max-width: 300px;
+    }
+    .price-image {
+        width: 300px;
+        height: auto;
+    }     
+    .title-jobs {
+        font-size: 20px;
+    } 
+    .text-jobs {
+        font-size: 14px;
+    }
+
+}

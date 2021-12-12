@@ -1,0 +1,500 @@
+@import url(`https://fonts.googleapis.com/css?family=Poppins&display=swap`);
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+/*header*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+   
+}
+
+.header-logo {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    max-width: 250px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+.header-nav {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    align-items: center;
+    margin: 0 auto;    
+    padding: 5px;
+}
+.fas,
+.fab {
+    display: flex;
+    color: rgb(88, 32, 32);
+    font-size: 30px;
+    margin: 35px auto;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+.fas:hover{
+    color: brown; 
+}
+.fab:hover{   
+    color: brown;       
+}
+.logo {   
+    font-size: 38px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    color: grey;
+}
+.nav-link {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(88, 32, 32);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all .3s linear;
+}
+.nav-link:hover {
+    color: brown;
+    font-size: 24px;
+    font-weight: 700; 
+}
+
+
+/*main*/
+.main {
+    display: flex;    
+    flex-direction: column;
+    flex-wrap: wrap;    
+    justify-content: center;
+    
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*PARALLAX*/
+.parallax {
+    background-image: url(../assets/parallax/1.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    max-width: 1600px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+.parallax-cotent {    
+    z-index: 3;
+}
+.parallax h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 25px;    
+}
+.parallax h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+.parallax a {        
+    padding: 10px 8px;    
+    background-color: chocolate;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+.parallax a:hover {
+    background-color: white;
+    color: chocolate;
+    font-weight: 800;
+}
+.parallax .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 2;
+}
+.page-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:350px;
+    margin: 0 auto;
+}
+
+/*END PARALAX*/
+
+
+/*probel*/
+.probel {
+    width: 100%;
+    max-width: 100px;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;  
+}
+.probel-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(71, 34, 34);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 10px auto;
+}
+.probel-title:after{
+    content: " ";
+    display: flex;
+    width: 70px;
+    height: 3px;
+    background-color:rgb(182, 33, 33);
+    margin: 20px auto;   
+}
+
+/*present*/
+.present {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+}
+.image {
+    width: 350px;
+    height: 275px;
+    margin: 0 15px;
+    transition: all .3s linear;
+}
+.image:hover {
+    width: 360px;
+    height: 280px;
+}
+/*jobs*/
+.jobs {
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;   
+}
+.jobs-inner {
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;   
+
+}
+.block-jobs1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(94, 13, 13);
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+}
+.content-jobs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    color: white;
+    margin: 0 auto;
+}
+.title-jobs {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+.text-jobs {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.btn-jobs {
+    padding: 7px 4px; 
+    width: 170px;       
+    background-color: gray;
+    color: brown;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    transition: all .3s linear;
+}
+.btn-jobs:hover {
+    background-color: rgb(206, 200, 200);
+    color: brown;
+    font-weight: 800;
+}
+.block-jobs2 {    
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+}
+.image-jobs {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;    
+}
+/*price*/
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/*contacts*/
+
+.main-contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 70px auto;
+}
+.block-contacts1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+.map {
+    border: white 3px solid;
+    margin: 0 auto;
+}
+.social {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    justify-content: center;
+    margin: 20px auto;
+}
+.adress {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;
+}
+.text-adress {
+    font-size: 20px;
+    color: grey;
+}
+
+/*form-letter*/
+.main-letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    background-color: rgb(77, 33, 33);
+    margin: 0 auto;
+    
+}
+
+.letter {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;    
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+.letter-name {
+    width: 100%;
+    max-width: 280px;
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 300;
+    font-style: italic;
+    color: white;
+    margin: 15px auto;
+
+}
+.letter input {
+    width: 280px;
+    height: 40px;
+    background-color: white;
+    border: grey 2px solid;
+    margin: 5px auto;
+
+}
+input.massage {
+    width: 280px;
+    height: auto;
+    min-height: 100px;
+    background-color: white;
+    border: grey 2px solid;
+    margin: 5px auto;
+}
+
+input.letter-btn {
+    display: block;    
+    width: 100%;
+    max-width: 280px;
+    height: 30px;
+    padding: 7px 0px;
+    margin-left: 0;
+    background-color: rgb(211, 206, 206);
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border: grey 2px solid;
+    transition: all .3s linear;
+}
+input.letter-btn:hover{
+    background-color:white;
+    color: rgb(8, 71, 71);
+    font-weight: 700;
+}
+#form {
+    width: 280px;
+    height: auto;
+}
+
+/*footer*/
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    border-top: 1px solid rgb(88, 35, 35);
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    max-width: 250px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+.footer-nav {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/*arrowUp*/
+
+.arrowUp {
+    display: block;
+    position: fixed;    
+    font-size: 60px;       
+    bottom: 7%;
+    right: 3%;
+    color: rgb(78, 37, 37);        
+    z-index: 3;  
+    transition: all .3s linear;  
+}
+.arrowUp:hover{
+    color: brown;
+    transition: all .3s linear;
+}
