@@ -1,0 +1,84 @@
+public class TicTavToe_101 {
+    public static void print(int[][] grid){
+        int humanOne = 1;
+        int humanTwo = 2;
+        char stepOne = 'X';
+        char stepTwo = '0';
+
+        for (int row = 0; row < grid.length; row++) {
+            for (int col = 0; col < grid[row].length; col++) {
+                if (grid[row][col] == humanOne) {
+                    grid[row][col] = stepOne;
+                 //   System.out.print(" " + stepOne + (col == grid[row].length-1 ? " " : " " + "┃" + " "));
+                    if (col == grid[row].length - 1){
+                        System.out.print(" " + stepOne + " " + " ");
+                    }else{
+                        System.out.print(" " + stepOne + " " + "┃");
+                    }
+                } else if (grid[row][col] == humanTwo) {
+                    grid[row][col] = stepTwo;
+                    if (col == grid[row].length - 1){
+                        System.out.print(" " + stepTwo + " " + " ");
+                    }else{
+                        System.out.print(" " + stepTwo + " " + "┃");
+                    }
+                } else if (grid[row][col] == 0) {
+                    grid[row][col] = ' ';
+                    if (col == grid[row].length - 1){
+                        System.out.print(" " + ' ' + " " + " ");
+                    }else{
+                        System.out.print(" " + ' ' + " " + "┃");
+                    }
+                }
+            }
+            System.out.println();
+            for (int N = 0; N < grid.length; N++) {
+                //  System.out.print("━" + "━" + "━" + "╋");
+                if (row == grid[N].length - 1) {
+                    System.out.print(" " + " " + " " + " ");
+                }else if (N == grid[row].length - 1){
+                    System.out.print("━" + "━" + "━" + " ");
+                }else{
+                    System.out.print("━" + "━" + "━" + "╋");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        int[][]grid = {{1, 2, 0},{0, 2, 1}, {0, 1, 2}};
+        print(grid);
+    }
+}
+
+
+//Задача #101
+//Теперь научимся выводить поле более красиво.
+//
+//Для этого напишем универсальную функцию, которая принимает матрицу целых чисел N*N (1 <= N <= 300), значения могут быть:
+//
+//0 — клетка свободна
+//1 — клетка занята первым игроком
+//2 — клетка занята вторым игроком
+//Функция должна выводить отформатированное поле:
+//
+//каждая клетка должна быть размером 3 столбца и 1 строка (без учета границ).
+//символ X или 0 должны располагаться по центру
+//для рамки использовать следующие символы: ━, ┃, ╋.
+//Сигнатура функции
+//Название функции: print.
+//
+//Параметры: int[][] grid.
+//
+//Возвращаемый тип: void.
+//
+//Примеры
+//Входные данные
+//grid = [ [ 2, 0, 1 ], [ 0, 1, 2 ], [ 1, 0, 0 ] ];
+//Выходные данные
+// 0 ┃   ┃ X
+//━━━╋━━━╋━━━
+//   ┃ X ┃ 0
+//━━━╋━━━╋━━━
+// X ┃   ┃
