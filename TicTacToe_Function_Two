@@ -1,0 +1,183 @@
+public class TicTacToe_103 {
+    public static int determineWinner(int[][] grid) {
+        int isDraw = 0;
+        int result = -1;
+        int n = grid.length;
+        int maxId = n - 1; // последний элемент массива( строки)
+
+        // ----- проверяем на победителя комбинацию главная диагональ
+        int[] arrayD = new int[n];
+        for (int i = 0; i < n; i++) {
+            arrayD[i] = grid[i][i];
+        }
+        result = winner(arrayD);
+
+        if (result == 1 || result == 2) {
+            return result;
+        }
+        // ------- проверяем на победителя комбинацию побочная диагональ
+        int[] arrayDr = new int[n];
+        for (int i = maxId; i >= 0; i--){
+            arrayDr[i] = grid[i][maxId - i];
+        }
+        result = winner(arrayDr);
+        if (result == 1 || result == 2){
+            return result;
+        }
+        //-------------- проверяем на победителя комбинации строк
+        int [] arrayRow = new int[n];
+        for (int i = 0, j = 0; i < n && j < n; j++){
+            arrayRow[j] = grid[i][j];
+            if (j == maxId){
+                j = -1;
+                result = winner(arrayRow);
+                if (result == 1 || result == 2) {
+                    return result;
+                }
+                i++;
+            }
+        }
+        // ---------------проверяем на победителя комбинации стобцов
+        int [] arrayCol = new int[n];
+        for (int i = 0, j = 0; i < n && j < n; i++) {
+            arrayCol[i] = grid[i][j];
+            if (i == maxId) {
+                i = -1;
+                result = winner(arrayCol);
+                if (result == 1 || result == 2) {
+                    return result;
+                }
+                j++;
+            }
+        }
+        // проверка на ничью строк
+        for (int i = 0, j = 0; i < n && j < n; j++){
+            arrayRow[j] = grid[i][j];
+            if (i == maxId) {
+                i = -1;
+                isDraw = draw(arrayRow);
+                if (isDraw == 0) {
+                    result = isDraw;
+                    return result;
+                }
+                i++;
+            }
+        }
+        // проверка на ничью столбцов
+        for (int i = 0, j = 0; i < n && j < n; i++) {
+            arrayCol[i] = grid[i][j];
+            if (i == maxId) {
+                i = -1;
+                isDraw = draw(arrayCol);
+                if(isDraw == 0) {
+                    result = isDraw;
+                    return result;
+                }
+                j++;
+            }
+        }
+        /////  проверка на ничью второстепенной диагонали
+        for (int i = maxId; i >= 0; i--){
+            arrayDr[i] = grid[i][maxId - i];
+        }
+        isDraw = draw(arrayDr);
+        if(isDraw == 0) {
+            result = isDraw;
+            return result;
+        }
+
+        /// проверка на ничью главной диагонали
+        for (int i = 0; i < n; i++) {
+            arrayD[i] = grid[i][i];
+        }
+        isDraw = draw(arrayD);
+        if(isDraw == 0) {
+            result = isDraw;
+            return result;
+        }
+        if(isDraw == -1) {
+            result = isDraw;
+        }
+        return result;
+    }
+    // дополнительный метод на выигрыш
+    public static int winner(int[] bestPlayer) {
+        int result = 0;
+        int n = bestPlayer.length;
+        int count1 = 0;
+        int count2 = 0;
+        // в цикле проходимся по ячейкам массива
+        for (int i = 0; i < n; i++) {
+            // если первая ячейка равна 1, то проверяем всю строку с помощью счетчика1
+            if (bestPlayer[i] == 1) {
+                count1++;
+            }
+            // иначе если ячейка массива равна 2, то проходим до конца всю строку счетчиком 2
+            else if(bestPlayer[i] == 2){
+                count2++;
+            }
+        }
+        if (count1 == n) {
+            result = 1;
+            return result;
+        }if(count2 == n) {
+            result = 2;
+            return result;
+        }else{
+            result = 0;
+        }
+        return result;
+    }
+    // метод для определения ничьей
+    public static int draw(int [] nullWinner){
+        int isDraw = 0;
+        int count1 = 0;
+        int count2 = 0;
+        int n = nullWinner.length;
+        for (int i = 0; i < n; i++){
+            if (nullWinner[i] != 2){
+                count2++;
+            }else {
+                count1++;
+            }
+        }if (count1 != 0 && count2 != 0){
+            isDraw = -1;
+        }else{
+            isDraw = 0;
+            return  isDraw;
+        }
+        return isDraw;
+    }
+    public static void main(String[] args) {
+        int[][] grid = {{1, 2, 2},{2, 0, 0}, {2, 0, 1}};
+        determineWinner(grid);
+        System.out.println(determineWinner(grid));
+    }
+}
+// Научимся определять победителя.
+//
+//Для этого напишем универсальную функцию, которая принимает матрицу целых чисел N*N (1 <= N <= 300), значения могут быть:
+//
+//0 — клетка свободна
+//1 — клетка занята первым игроком
+//2 — клетка занята вторым игроком
+//Функция должна возвращать:
+//
+//1, если есть выигрышная комбинация для первого игрока
+//2, если есть выигрышная комбинация для второго игрока
+//-1, если уже никто победить не сможет (присутствуют 1 и 2 на любой строке, столбце, диагоналях)
+//0, если победителя еще нельзя определить
+//Выигрышная комбинация — вся строка или столбец, или диагональ заняты одним игроком.
+//
+//Сигнатура функции
+//Название функции: determineWinner.
+//
+//Параметры: int[][] grid.
+//
+//Возвращаемый тип: int.
+//
+//Примеры
+//Входные данные
+//grid = [ [ 1, 0, 2 ], [ 0, 1, 2 ], [ 0, 0, 1 ] ];
+//Выходные данные
+//result = 1;
