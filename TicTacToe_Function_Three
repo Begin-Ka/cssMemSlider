@@ -1,0 +1,66 @@
+public class TicTacToe_105 {
+    public static class Cell{
+        public int row;
+        public int col;
+
+        public Cell(){
+        }
+        public Cell(int row, int col){
+            this.row = row;
+            this.col = col;
+        }
+    }
+    public static Cell parseMove(String line) {
+        Cell num = new Cell();
+        // удаляем пробелы в начале и конце строки и множественные пробелы
+        line = line.replaceAll("[\\s]{2,}", " ").trim();
+        // проверяем наличие посторонних символов
+        String str = line.replaceAll("[^ 1-3]", "");
+        // в итоге должны остаться две цифры и один пробел мужду ними
+        if (str.length() != 3 || !str.equals(line))
+            return null;
+        str = str.replaceAll(" ", "");
+        int tmp = Integer.parseInt(str);
+        num.row = tmp / 10;
+        num.col = tmp % 10;
+        return num;
+    }
+    public static void main(String[] args) {
+        String line = "12";
+        parseMove(line);
+        System.out.println(line);
+    }
+}
+
+// Мы пишем реальную программу, а настоящие пользователи могут вводить любые данные. Наша программа должна адекватно реагировать на любой ввод.
+//
+//Будем считать правильным вводом, если на одной строке ввели два числа (столбец и строку) от 1 до 3. Пробелов может быть сколько угодно.
+//
+//Поэтому напишем функцию, которая принимает строку и возвращает клетку Cell в случае, если строка содержит только пробелы и два числа от 1 до 3. Иначе функция должна вернуть null.
+//
+//Классы
+//Имя класса: Cell, поля: int row, int col.
+//
+//Сигнатура функции
+//Название функции: parseMove.
+//
+//Параметры: String line.
+//
+//Возвращаемый тип: Cell.
+//
+//Примеры
+//Пример 1
+//
+//Входные данные
+//line = "1 3";
+//Выходные данные
+//result = {
+//  "col" : 3,
+//  "row" : 1
+//};
+//Пример 2
+//
+//Входные данные
+//line = "1 5";
+//Выходные данные
+//result = null;
